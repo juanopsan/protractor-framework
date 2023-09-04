@@ -24,6 +24,10 @@ let homepage = function(){
         let output = element(by.cssContainingText('h2.ng-binding', result));
         expect(output.getText()).toEqual(result);
     };
+
+    this.selectOperator = function(option){
+        let operator_dropdown = element(by.css(`[ng-model="operator"] option[value="${option}"]`)).click();
+    };
 };
 
 module.exports = new homepage();
